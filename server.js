@@ -18,6 +18,8 @@ import credentials from "./middlewares/credentials.js";
 import connectMongo from "./db/mongo.js";
 import { fileURLToPath } from "url";
 import path from "path";
+import booksRouter from "./routes/books.js";
+import studentsRouter from "./routes/students.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -45,6 +47,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });
 
+app.use("/api/v1/", rootRouter);
 app.use("/api/v1/auth/register", registerRouter);
 app.use("/api/v1/auth/login", loginRouter);
 app.use("/api/v1/auth/logout", logoutRouter);
@@ -53,7 +56,8 @@ app.use("/api/v1/tokens/refresh", refreshTokenRouter);
 app.use(verifyJWT);
 
 app.use("/api/v1/users", usersRouter);
-app.use("/api/v1/", rootRouter);
+app.use("/api/v1/books", booksRouter);
+app.use("/api/v1/students", studentsRouter);
 
 // Listening to Database
 mongoose.connection.once("open", () => {
