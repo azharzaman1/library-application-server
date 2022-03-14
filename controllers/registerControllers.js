@@ -3,7 +3,6 @@ import User from "../models/auth/userModal.js";
 
 export const registerNewUser = async (req, res) => {
   const { username, pswd, email } = req.body;
-  console.log(req.body);
 
   if (!username && !pswd && !email) {
     return res.status(400).json({

@@ -2,3 +2,177 @@
 
 20220313	23:02:52	4fedcb48-403e-4207-b873-58497bd40c72	GET	localhost:3500	/favicon.ico
 
+20220314	15:02:18	75eb79fe-6730-446b-85c0-10123ecf0d96	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:02:45	0857d6e5-20d9-4da7-813e-45f2bbc1830c	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:02:47	d245df02-0252-4884-b10b-ddc35da7f279	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:03:00	7d97b21b-7d95-42aa-bb2b-d22aefbb844f	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:03:10	0b982cff-38d3-4fc0-b656-a381d0bda831	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:08:26	e83e27db-859d-4d3b-bceb-c89256b2afc5	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:09:29	55ad09ef-b7b4-4fee-845f-19581b81c91e	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:10:22	ae2d401e-6193-4926-8e30-9e3a33ea0ca8	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:11:07	2058a684-a5c7-4730-b3dd-13928b0258dc	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:11:17	ffcebebf-b700-479c-8895-0960a3c52eee	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:11:31	52b7e689-a952-4be8-be77-d41b95f2820c	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:11:44	58ceb61a-dcd5-462d-bf01-84186a3d0998	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:12:04	ba8ea5a0-fa2e-4f88-bc23-70dd41b14857	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:13:05	7b25b143-4fc4-4632-9ca4-179149a513dd	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:13:57	0222ea65-cedf-42ad-a4a3-ad0f473699b4	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:14:11	8d187fe8-8681-43c3-b4a2-1049f51258f6	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:15:37	19154250-d292-4003-b63f-29f885cc7eb1	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:24:34	ef410d21-1637-40b2-9a3e-716529c40bfd	GET	http://localhost:3000	/users
+
+20220314	15:24:58	0baeca0d-e9ac-4269-adc5-c826aec45262	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:25:20	de592dc4-4ce6-441f-b98c-a7faf851a5a8	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:25:43	83e5ba73-4997-439a-8cd8-721b5eb519ab	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:26:42	d2c29669-1189-4db1-a6ab-de25282e221e	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:27:17	1bdd28bb-0ce0-47d7-b8ff-aa42aaac2c5a	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:28:28	ae60bd26-d9ed-4369-b953-95d69c2a1983	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:28:56	552f20f8-ef19-43f2-9495-f9ac08d2544f	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:29:00	77d72b8a-e1ec-451b-9c28-066a569b9d46	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:29:27	6dc71c5e-c1f6-48ed-98ca-71362df38ea5	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:29:57	9caf4c41-d518-4865-9416-bfe2ead616e2	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:31:28	a5284ea6-029a-4382-9c84-6bb5c6f61d9d	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:31:34	c71eda48-fafe-4cc6-ac50-0605734cbb5e	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:32:25	f8dc2649-7d4e-4db5-ab8b-5216155f2cfa	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:32:31	81640ebf-a746-4efb-a984-1b3e79471371	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:32:38	1014229d-4609-415b-ad32-e1bea65468d1	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:34:41	982f7ac3-a559-45f7-a15f-1a5900f47dc4	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:34:54	786c60c8-f1f8-48d4-99d7-941c122a550e	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:34:55	e8b2f087-6242-4b79-a114-74d2eb82d6f7	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:35:21	5d2b86d0-03dc-49c9-9cd2-ec3d7465e087	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:37:27	d3547600-643e-4fc5-9249-97ec406d8b34	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:37:28	1b27b488-8541-4466-bf27-8fdce26cd3e6	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:37:41	520d966b-4cc0-49d2-a030-edb5ffc515eb	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:45:56	b58fea12-90ae-4acf-8d43-ee3801788242	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:45:56	facd3215-2fff-4026-bc1f-556bf0d3a8e8	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:45:56	9a830546-b157-4d77-a4e1-710355503f4b	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:46:02	3ae2c25c-1ee2-4b25-a354-884367f9c1d1	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:48:11	17365b79-acb5-4136-9b1f-398029d57d08	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:48:11	3009338c-7416-49b7-8358-aa8eb59d9007	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:48:11	f8f41a26-1da7-4810-9edc-4136c142ad75	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:48:23	2b1c7cd4-3457-47cc-ab74-1ccd02360c72	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:50:58	a0f812a8-eacb-469e-bfad-ea0c69014d54	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:50:58	0766d004-afca-456a-a676-779c0a042aa1	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:50:59	4a3748b7-a025-491d-8ebd-6c83be9f0bac	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:52:45	7c9334f4-f7cb-4dfc-97d3-718ecb16db8a	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:52:51	449fd923-c41c-4115-9ee6-c32951ced12a	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:53:15	5951a191-6cff-4fcc-b58e-6bd182d542a6	POST	http://localhost:3000	/api/v1/students
+
+20220314	15:53:15	83b71b39-24a9-4492-ac18-248bf849c345	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:53:15	49902b7f-549b-4666-8279-e53da5a12d1c	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:54:21	07d7a844-bde9-40cd-b625-f7189a797908	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:54:41	6b8c0666-3679-43ef-9fd4-41ae3833a90f	GET	http://localhost:3000	/api/v1/students
+
+20220314	15:55:26	394ee2a0-3b9e-42fd-8306-c9e49c3a379c	GET	http://localhost:3000	/api/v1/students
+
+20220314	16:02:34	4e93dcd7-db10-4678-ae35-674a559a1feb	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:03:28	9ae2bb57-7b49-44d2-aaa2-13f9590e6c5d	POST	http://localhost:3000	/api/v1/books
+
+20220314	16:03:28	fe373eae-a170-4174-b8ee-64ea1f49797d	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:03:28	5b7955d7-7bea-40c9-8c3a-e169c41ff11a	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:04:46	8ab0a30c-7029-47e1-816a-be7a210038c5	POST	http://localhost:3000	/api/v1/books
+
+20220314	16:04:46	815aa7f0-2602-4f87-be37-28cb23d0c25b	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:04:46	dbcf13dd-93c0-486e-a7b0-056429040016	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:11:13	f094f23e-ed9a-4477-8dcc-355eb29b7318	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:12:00	c19764e3-242e-4b15-a87f-2dad89cafff9	POST	http://localhost:3000	/api/v1/books
+
+20220314	16:12:00	ab4da976-31c9-44ed-a1b6-ed5fa1c786c3	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:12:00	e9b709e0-3520-498b-86b0-7d086a54aa83	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:12:30	f444defa-5e67-4717-8be8-474c8fc46efa	POST	http://localhost:3000	/api/v1/books
+
+20220314	16:12:30	366d2d1a-4302-49a0-bb10-9e8faf96d3f0	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:12:31	ffc6fab8-b505-4c90-a219-517eac6f6a5c	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:12:47	13965412-fcc4-48ec-8b4f-3d479df55c63	POST	http://localhost:3000	/api/v1/books
+
+20220314	16:12:47	d9754178-22bc-4196-8631-a43962970aef	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:12:47	ea71074d-a322-4a07-80c2-a7b38138001c	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:14:11	fd1c514f-142c-40fc-a5cb-56d73fae325d	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:14:37	05a14813-deb2-4d6e-8d42-2e486db83916	POST	http://localhost:3000	/api/v1/books
+
+20220314	16:14:38	3e252a7a-15c0-476c-9286-2a7d438869ba	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:14:38	ea13c255-4633-4842-935a-206c61ae8974	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:16:10	0aba9616-9d1b-43ad-a78d-0f3959197603	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:16:23	2ddb734d-f036-4cf3-8d08-73fa74e5986d	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:16:39	a0983df9-cd4f-46e8-96ea-4b8c0c17e279	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:17:36	293f2e4b-124a-48f7-a0cd-80b809b0f30f	POST	http://localhost:3000	/api/v1/books
+
+20220314	16:17:36	87a014c6-80b6-4250-92ca-de2002cc78ed	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:17:36	52d3357e-166a-4df6-a5a8-85ee59de9dd2	GET	http://localhost:3000	/api/v1/books
+
+20220314	16:18:22	8cbbd24f-605b-42ea-9d61-57d3c0591f07	GET	http://localhost:3000	/api/v1/books
+

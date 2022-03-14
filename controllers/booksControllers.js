@@ -8,7 +8,7 @@ export const getBooks = async (req, res) => {
       return res.sendStatus(204);
     }
     res.statusMessage = "Data Found";
-    res.status(200).json({ books });
+    res.status(200).json({ found });
   } catch (err) {
     res.statusMessage = err.message;
     res.sendStatus(500);
@@ -25,6 +25,23 @@ export const getBookById = async (req, res) => {
     }
 
     res.status(200).json({ message: `Found`, found });
+  } catch (err) {
+    res.statusMessage = err.message;
+    res.sendStatus(500);
+  }
+};
+
+export const addBook = async (req, res) => {
+  console.log(req.body);
+  try {
+    const added = await Book.create(req.body);
+
+    if (!added) {
+      res.statusMessage = "Unable to post";
+      return res.sendStatus(500);
+    }
+    res.statusMessage = "Added successfully";
+    res.status(201).json({ added });
   } catch (err) {
     res.statusMessage = err.message;
     res.sendStatus(500);

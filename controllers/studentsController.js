@@ -31,6 +31,23 @@ export const getStudentById = async (req, res) => {
   }
 };
 
+export const addStudent = async (req, res) => {
+  console.log(req.body);
+  try {
+    const added = await Student.create(req.body);
+
+    if (!added) {
+      res.statusMessage = "Unable to post";
+      return res.sendStatus(500);
+    }
+    res.statusMessage = "Added successfully";
+    res.status(201).json({ added });
+  } catch (err) {
+    res.statusMessage = err.message;
+    res.sendStatus(500);
+  }
+};
+
 export const updateStudent = async (req, res) => {
   const id = req.params.id || req.body.id;
 

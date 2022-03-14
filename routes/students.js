@@ -5,6 +5,7 @@ import {
   getStudents,
   updateStudent,
   deleteStudent,
+  addStudent,
 } from "../controllers/studentsController.js";
 import verifyRoles from "../middlewares/verifyRoles.js";
 import { userRoles } from "../config/userRoles.js";
@@ -13,6 +14,8 @@ import { userRoles } from "../config/userRoles.js";
 studentsRouter.get("/:id", getStudentById); //accessable by admin & user only
 
 studentsRouter.get("/", getStudents); //accessable by admin only
+
+studentsRouter.post("/", addStudent); //accessable by admin only
 
 studentsRouter.put("/:id", updateStudent); //accessable by admin only
 

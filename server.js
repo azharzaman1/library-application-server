@@ -53,11 +53,11 @@ app.use("/api/v1/auth/login", loginRouter);
 app.use("/api/v1/auth/logout", logoutRouter);
 app.use("/api/v1/tokens/refresh", refreshTokenRouter);
 
-app.use(verifyJWT);
-
 app.use("/api/v1/users", usersRouter);
 app.use("/api/v1/books", booksRouter);
 app.use("/api/v1/students", studentsRouter);
+
+app.use(verifyJWT);
 
 // Listening to Database
 mongoose.connection.once("open", () => {

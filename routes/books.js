@@ -1,5 +1,6 @@
 import express from "express";
 import {
+  addBook,
   deleteBook,
   getBookById,
   getBooks,
@@ -8,12 +9,14 @@ import {
 const booksRouter = express.Router();
 
 // Routes
-booksRouter.get("/:id", getBookById); //accessable by admin & user only
+booksRouter.get("/:id", getBookById);
 
-booksRouter.get("/", getBooks); //accessable by admin only
+booksRouter.get("/", getBooks);
 
-booksRouter.put("/:id", updateBook); //accessable by admin only
+booksRouter.post("/", addBook);
 
-booksRouter.delete("/:id", deleteBook); //accessable by admin only
+booksRouter.put("/:id", updateBook);
+
+booksRouter.delete("/:id", deleteBook);
 
 export default booksRouter;
