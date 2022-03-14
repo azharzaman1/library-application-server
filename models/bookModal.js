@@ -8,6 +8,7 @@ const bookSchema = new mongoose.Schema(
     borrowedBy: { type: String },
     borrowedOn: { type: Date },
     returnDate: { type: Date },
+    slug: { type: String, required: true },
   },
   { timestamps: true }
 );

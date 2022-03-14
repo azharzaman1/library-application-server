@@ -18,7 +18,7 @@ export const getStudents = async (req, res) => {
 export const getStudentById = async (req, res) => {
   const id = req.params.id;
   try {
-    const found = await Student.findById(id).exec();
+    const found = await Student.findOne({ slug: id }).exec();
     if (!found) {
       res.statusMessage = "Data Found";
       return res.sendStatus(204);
@@ -34,7 +34,10 @@ export const getStudentById = async (req, res) => {
 export const addStudent = async (req, res) => {
   console.log(req.body);
   try {
-    const added = await Student.create(req.body);
+    const intials = await Student.find().exec();
+    const lastItem = intials?.sort((a, b) => a.rollNo - b.rollNo).slice(-1)[0];
+    const rollNo = lastItem?.rollNo ? lastItem.rollNo + 1 : intials?.length + 1;
+    const added = await Student.create({ ...req.body, rollNo });
 
     if (!added) {
       res.statusMessage = "Unable to post";

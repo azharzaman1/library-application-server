@@ -18,7 +18,7 @@ export const getBooks = async (req, res) => {
 export const getBookById = async (req, res) => {
   const id = req.params.id;
   try {
-    const found = await Book.findById(id).exec();
+    const found = await Book.findOne({ slug: id }).exec();
     if (!found) {
       res.statusMessage = "Data Found";
       return res.sendStatus(204);
