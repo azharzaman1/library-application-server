@@ -55,7 +55,7 @@ export const updateStudent = async (req, res) => {
   const id = req.params.id || req.body.id;
 
   try {
-    const updated = await Student.findByIdAndUpdate(id, req.body, {
+    const updated = await Student.findOneAndUpdate({ slug: id }, req.body, {
       new: true,
     }).exec();
 
@@ -74,20 +74,20 @@ export const updateStudent = async (req, res) => {
 export const deleteStudent = async (req, res) => {
   const id = req.params.id || req.body.id;
 
-  const found = await Student.findById(id).exec();
+  const found = await Student.findOne({ slug: id }).exec();
   if (!found) {
     res.statusMessage = "Not Found";
     return res.sendStatus(404);
   }
 
   try {
-    const deleted = await Student.deleteOne({ _id: id }).exec();
+    const deleted = await Student.deleteOne({ slug: id }).exec();
 
     if (!deleted) {
       res.statusMessage = "Unable to delete";
       return res.sendStatus(500);
     }
-
+    res.statusMessage = "Deleted";
     res.status(200).json({ deleted });
   } catch (err) {
     res.statusMessage = err.message;

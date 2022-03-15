@@ -32,7 +32,6 @@ export const getBookById = async (req, res) => {
 };
 
 export const addBook = async (req, res) => {
-  console.log(req.body);
   try {
     const added = await Book.create(req.body);
 
@@ -52,7 +51,7 @@ export const updateBook = async (req, res) => {
   const id = req.params.id || req.body.id;
 
   try {
-    const updated = await Book.findByIdAndUpdate(id, req.body, {
+    const updated = await Book.findOneAndUpdate({ slug: id }, req.body, {
       new: true,
     }).exec();
 
@@ -71,20 +70,20 @@ export const updateBook = async (req, res) => {
 export const deleteBook = async (req, res) => {
   const id = req.params.id || req.body.id;
 
-  const found = await Book.findById(id).exec();
+  const found = await Book.findOne({ slug: id }).exec();
   if (!found) {
     res.statusMessage = "Not Found";
     return res.sendStatus(404);
   }
 
   try {
-    const deleted = await Book.deleteOne({ _id: id }).exec();
+    const deleted = await Book.deleteOne({ slug: id }).exec();
 
     if (!deleted) {
       res.statusMessage = "Unable to delete";
       return res.sendStatus(500);
     }
-
+    res.statusMessage = "Deleted";
     res.status(200).json({ deleted });
   } catch (err) {
     res.statusMessage = err.message;
