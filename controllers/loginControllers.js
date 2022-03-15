@@ -33,7 +33,7 @@ export const loginUser = async (req, res) => {
           roles,
         },
         config.ACCESS_TOKEN_SECRET_KEY,
-        { expiresIn: "100s" }
+        { expiresIn: "10s" }
       );
 
       const refreshToken = jwt.sign(
@@ -43,7 +43,7 @@ export const loginUser = async (req, res) => {
           roles,
         },
         config.REFRESH_TOKEN_SECRET_KEY,
-        { expiresIn: "1d" }
+        { expiresIn: "3d" }
       );
 
       // sending refresh token in httpOnly cooky(no accessible with js)
