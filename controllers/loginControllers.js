@@ -57,11 +57,15 @@ export const loginUser = async (req, res) => {
       foundUser.refreshToken = refreshToken;
       const updatedUser = await foundUser.save();
       res.statusMessage = "Login Successfull";
-      res.json({
-        user: {
-          ...{ ...updatedUser._doc, refreshToken: undefined }, //excluding refresh token from res
-          accessToken,
-        },
+      let tempUser = {
+        ...{ ...updatedUser._doc }, // excluding refresh token from res
+        accessToken,
+      };
+      delete tempUser.refreshToken;
+      delete tempUser.pswd;
+      delete tempUser.__v;
+      res.status(202).json({
+        user: tempUser,
       });
     } else {
       res.statusMessage = "Password is incorrect";

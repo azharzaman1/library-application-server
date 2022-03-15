@@ -69,7 +69,7 @@ export const updateBook = async (req, res) => {
 
 export const deleteBook = async (req, res) => {
   const id = req.params.id || req.body.id;
-
+  console.log(id);
   const found = await Book.findOne({ slug: id }).exec();
   if (!found) {
     res.statusMessage = "Not Found";

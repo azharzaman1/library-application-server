@@ -5,11 +5,8 @@ export const registerNewUser = async (req, res) => {
   const { username, pswd, email } = req.body;
 
   if (!username && !pswd && !email) {
-    return res.status(400).json({
-      status: "failed",
-      message:
-        "Unable to Register an account. Some Important Fields are missing",
-    }); // bad request
+    res.statusMessage = "Failed to Register. Important Fields are missing";
+    return res.sendStatus(400); // bad request
   }
 
   const duplicateUserName = await User.findOne({ username }).exec();
@@ -26,15 +23,15 @@ export const registerNewUser = async (req, res) => {
   }
   try {
     const hashedPswd = await bcrypt.hash(pswd, 10);
-    const user = { ...req.body, pswd: hashedPswd }; // user role will be added automatically
+    const user = { ...req.body, pswd: hashedPswd }; // [user] role will be added automatically
 
     const createdUser = await User.create(user);
 
     if (createdUser) {
-      res.statusMessage = "user created successfully with auto generated ID";
+      res.statusMessage = "Registered successfully";
       res.status(201).send(createdUser);
     } else {
-      res.statusMessage = "unable to create user";
+      res.statusMessage = "unable to register";
       res.sendStatus(500);
     }
   } catch (err) {

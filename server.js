@@ -48,16 +48,17 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1/", rootRouter);
-app.use("/api/v1/auth/register", registerRouter);
-app.use("/api/v1/auth/login", loginRouter);
-app.use("/api/v1/auth/logout", logoutRouter);
+app.use("/auth/register", registerRouter);
+app.use("/auth/login", loginRouter);
+app.use("/auth/logout", logoutRouter);
 app.use("/api/v1/tokens/refresh", refreshTokenRouter);
 
 app.use("/api/v1/users", usersRouter);
-app.use("/api/v1/books", booksRouter);
-app.use("/api/v1/students", studentsRouter);
 
 app.use(verifyJWT);
+
+app.use("/api/v1/books", booksRouter);
+app.use("/api/v1/students", studentsRouter);
 
 // Listening to Database
 mongoose.connection.once("open", () => {

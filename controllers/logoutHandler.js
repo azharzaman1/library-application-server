@@ -7,21 +7,20 @@ export const handleLogout = async (req, res) => {
   if (!cookies?.jwt) return res.sendStatus(401); // unauthorized
   const refreshToken = cookies.jwt;
 
+  // Is refreshToken in db?
   const foundUser = await User.findOne({ refreshToken }).exec();
   if (!foundUser) {
-    res.clearCookie("jwt", {
-      httpOnly: true,
-      sameSite: "None",
-      // secure: true,
-    });
-    res.status(204).json({ message: "Successfully logged out" }); // no content
+    res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true });
+    res.statusMessage = "Logged out Successfully";
+    return res.sendStatus(204);
   }
 
-  try {
-    foundUser.refreshToken = undefined;
-    const result = await foundUser.save();
-    res.status(204).json({ message: "Successfully logged out" }); // no content
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
+  // Delete refreshToken in db
+  foundUser.refreshToken = "";
+  const result = await foundUser.save();
+  console.log(result);
+
+  res.clearCookie("jwt", { httpOnly: true, sameSite: "None", secure: true });
+  res.statusMessage = "Logged out Successfully";
+  res.sendStatus(204);
 };

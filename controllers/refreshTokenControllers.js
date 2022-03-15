@@ -21,7 +21,8 @@ export const handleRefreshToken = async (req, res) => {
       (err, decoded) => {
         if (err || foundUser.username !== decoded.username) {
           // forbidden
-          res.statusMessage = "Token cannot be verified. Probably counterfiet";
+          res.statusMessage =
+            "Token could not be verified. Probably counterfiet";
           return res.sendStatus(403);
         }
 
@@ -36,8 +37,16 @@ export const handleRefreshToken = async (req, res) => {
           config.ACCESS_TOKEN_SECRET_KEY,
           { expiresIn: "100s" }
         );
+        let tempUser = {
+          ...{ ...foundUser._doc }, // excluding refresh token from res
+          accessToken,
+        };
+        delete tempUser.refreshToken;
+        delete tempUser.pswd;
+        delete tempUser.__v;
+        console.log(tempUser);
         res.statusMessage = "Token Refresh Successfull";
-        res.status(200).json({ accessToken });
+        res.status(200).json({ ...tempUser });
       }
     );
   } catch (err) {
