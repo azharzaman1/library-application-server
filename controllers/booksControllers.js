@@ -17,11 +17,9 @@ export const getBooks = async (req, res) => {
 };
 
 export const getManyBooks = async (req, res) => {
-  const ids = req.body.ids;
-  console.log("ids", req.body);
   try {
     const result = await Book.find({
-      _id: { $in: ["6231e4bd0d861d17a2d5eb83", "6231edd7a79334fc978e1c2b"] },
+      _id: { $in: ids },
     });
 
     if (!result) {
@@ -90,7 +88,6 @@ export const updateBook = async (req, res) => {
 
 export const deleteBook = async (req, res) => {
   const id = req.params.id || req.body.id;
-  console.log(id);
   const found = await Book.findOne({ slug: id }).exec();
   if (!found) {
     res.statusMessage = "Not Found";

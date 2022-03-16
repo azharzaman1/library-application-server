@@ -32,7 +32,6 @@ export const getStudentById = async (req, res) => {
 };
 
 export const addStudent = async (req, res) => {
-  console.log(req.body);
   try {
     const intials = await Student.find().exec();
     const lastItem = intials?.sort((a, b) => a.rollNo - b.rollNo).slice(-1)[0];

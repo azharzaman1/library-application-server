@@ -26194,3 +26194,7 @@
 
 20220316	20:09:19	b3f187dc-845e-4841-bc82-c488cff4412b	GET	http://localhost:3000	/api/v1/tokens/refresh
 
+20220316	20:10:50	fd256abe-1266-4188-bee9-7444f6438724	POST	http://localhost:3000	/auth/register
+
+20220316	20:11:14	a4f8a777-c3a9-4a35-8c84-e0efe4b7b42a	POST	http://localhost:3000	/auth/register
+

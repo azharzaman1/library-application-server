@@ -4,7 +4,6 @@ import config from "../config/env.js";
 
 export const handleRefreshToken = async (req, res) => {
   const cookies = req.cookies;
-  console.log(cookies);
   if (!cookies?.jwt) {
     res.statusMessage = "Token Unavailable via cookie";
     return res.sendStatus(401);
@@ -44,7 +43,6 @@ export const handleRefreshToken = async (req, res) => {
         delete tempUser.refreshToken;
         delete tempUser.pswd;
         delete tempUser.__v;
-        console.log(tempUser);
         res.statusMessage = "Token Refresh Successfull";
         res.status(200).json({ ...tempUser });
       }
