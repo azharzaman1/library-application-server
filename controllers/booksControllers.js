@@ -1,4 +1,5 @@
 import Book from "../models/bookModal.js";
+import mongoose from "mongoose";
 
 export const getBooks = async (req, res) => {
   try {
@@ -9,6 +10,26 @@ export const getBooks = async (req, res) => {
     }
     res.statusMessage = "Data Found";
     res.status(200).json({ found });
+  } catch (err) {
+    res.statusMessage = err.message;
+    res.sendStatus(500);
+  }
+};
+
+export const getManyBooks = async (req, res) => {
+  const ids = req.body.ids;
+  console.log("ids", req.body);
+  try {
+    const result = await Book.find({
+      _id: { $in: ["6231e4bd0d861d17a2d5eb83", "6231edd7a79334fc978e1c2b"] },
+    });
+
+    if (!result) {
+      res.statusMessage = "Nothing Found";
+      return res.sendStatus(204);
+    }
+    res.statusMessage = "Data Found";
+    res.status(200).json({ result });
   } catch (err) {
     res.statusMessage = err.message;
     res.sendStatus(500);

@@ -7,6 +7,7 @@ const studentSchema = new mongoose.Schema(
     class: { type: String },
     rollNo: { type: Number, required: true },
     slug: { type: String, required: true },
+    borrowedBooks: [String],
   },
   { timestamps: true }
 );

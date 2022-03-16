@@ -7,6 +7,7 @@ const bookSchema = new mongoose.Schema(
     slug: { type: String, required: true },
     isBorrowed: { type: Boolean, default: false },
     borrowedBy: { type: String },
+    student: { type: Object, default: null },
     borrowedOn: { type: Date },
     returnDate: { type: Date },
   },

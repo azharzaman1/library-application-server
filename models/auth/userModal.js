@@ -13,6 +13,7 @@ const userSchema = new mongoose.Schema(
     },
     email: { type: String, required: true, unique: true, trim: true },
     pswd: { type: String, required: true, trim: true },
+
     roles: {
       Admin: Number,
       User: { type: Number, default: 2001 },

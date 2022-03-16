@@ -53,9 +53,21 @@ export const addStudent = async (req, res) => {
 
 export const updateStudent = async (req, res) => {
   const id = req.params.id || req.body.id;
+  const borrowedBook = req.body?.borrowedBook;
+
+  const found = await Student.findOne({ slug: id }).exec();
+  if (!found) {
+    res.statusMessage = "Not Found";
+    return res.sendStatus(404);
+  }
+
+  let dataToUpdate = { ...req.body };
+  if (borrowedBook) {
+    dataToUpdate = { borrowedBooks: [...found?.borrowedBooks, borrowedBook] };
+  }
 
   try {
-    const updated = await Student.findOneAndUpdate({ slug: id }, req.body, {
+    const updated = await Student.findOneAndUpdate({ slug: id }, dataToUpdate, {
       new: true,
     }).exec();
 

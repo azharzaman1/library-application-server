@@ -5,6 +5,7 @@ import {
   deleteBook,
   getBookById,
   getBooks,
+  getManyBooks,
   updateBook,
 } from "../controllers/booksControllers.js";
 import verifyRoles from "../middlewares/verifyRoles.js";
@@ -15,6 +16,8 @@ const booksRouter = express.Router();
 booksRouter.get("/:id", getBookById); // everyone can hit
 
 booksRouter.get("/", getBooks); // everyone can hit
+
+booksRouter.post("/many", getManyBooks); // everyone can hit
 
 booksRouter.post("/", verifyRoles(userRoles.Admin), addBook); // only admin can hit
 
