@@ -12,17 +12,17 @@ import { userRoles } from "../config/userRoles.js";
 
 // Routes
 
-// add verifyRoles(userRoles.Admin, userRoles.Admin)
+// add verifyRoles(userRoles.Admin, userRoles.User)
 // middleware to check roles before processing
 
-studentsRouter.get("/:id", getStudentById); //accessable by admin & user only
+studentsRouter.get("/:id", getStudentById); // anyone can hit
 
-studentsRouter.get("/", getStudents); //accessable by admin only
+studentsRouter.get("/", getStudents); // anyone can hit
 
-studentsRouter.post("/", addStudent); //accessable by admin only
+studentsRouter.post("/", verifyRoles(userRoles.Admin), addStudent); //accessable by admin only
 
-studentsRouter.put("/:id", updateStudent); //accessable by admin only
+studentsRouter.put("/:id", verifyRoles(userRoles.Admin), updateStudent); //accessable by admin only
 
-studentsRouter.delete("/:id", deleteStudent); //accessable by admin only
+studentsRouter.delete("/:id", verifyRoles(userRoles.Admin), deleteStudent); //accessable by admin only
 
 export default studentsRouter;

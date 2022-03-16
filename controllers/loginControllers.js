@@ -5,7 +5,6 @@ import config from "../config/env.js";
 
 export const loginUser = async (req, res) => {
   const { pswd, email } = req.body;
-
   if ((!pswd, !email)) {
     res.statusMessage = "Email and password are required";
     return res.sendStatus(400); // bad request
