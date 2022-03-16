@@ -17,6 +17,7 @@ export const getBooks = async (req, res) => {
 };
 
 export const getManyBooks = async (req, res) => {
+  const ids = req.body.ids;
   try {
     const result = await Book.find({
       _id: { $in: ids },
