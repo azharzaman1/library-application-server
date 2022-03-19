@@ -27030,3 +27030,7 @@
 
 20220319	17:55:37	1af1b609-18a5-4170-8242-8c30718d937e	POST	http://localhost:3000	/auth/login
 
+20220319	18:08:54	4c81f009-8448-4ccb-a0ba-b9f82e448d84	POST	http://localhost:3000	/auth/login
+
+20220319	18:08:57	c249fd69-d12e-48a5-b11b-701a683fde18	POST	http://localhost:3000	/auth/login
+
