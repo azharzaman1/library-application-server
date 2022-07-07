@@ -30,10 +30,11 @@ const logEvents = async (message, logName) => {
 export default logEvents;
 
 export const logger = (req, res, next) => {
+  const requestTime = `${format(new Date(), "HH:mm:ss")}`;
   logEvents(
     `${req.method}\t${req.headers.origin || req.headers.host}\t${req.url}\n`,
     "requestsLog.txt"
   );
-  console.log(`${req.method} ${req.path}`);
+  console.log(`@${requestTime} ${req.method} ${req.path}`);
   next();
 };
