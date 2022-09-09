@@ -2,6 +2,7 @@ export const allowedOrigins = [
   "http://localhost:3000",
   "https://azhar-libraryapp.vercel.app",
   "https://library.azharzaman.com",
+  "https://library-kamran.vercel.app"
 ];
 
 export const corOptions = {
